@@ -1,10 +1,9 @@
 package com.company;
 
-import com.company.algorithm.LongestPalindromicSubstring;
-import com.company.algorithm.MergeSortedLists;
-import com.company.algorithm.RegularExpressionMatching;
-import com.company.algorithm.ReverseNodesInGroup;
+import com.company.algorithm.*;
 import com.company.pojo.ListNode;
+
+import java.util.List;
 
 public class Main {
 
@@ -26,7 +25,14 @@ public class Main {
 //        MergeSortedLists mergeSortedLists = new MergeSortedLists();
 //        mergeSortedLists.mergeKLists(listNodes);
         //树的反向节点
-        ReverseNodesInGroup reverseNodesInGroup = new ReverseNodesInGroup();
-        reverseNodesInGroup.reverseKGroup2(new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5))))), 2);
+//        ReverseNodesInGroup reverseNodesInGroup = new ReverseNodesInGroup();
+//        reverseNodesInGroup.reverseKGroup2(new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5))))), 2);
+        //连接所有单词的子串"ababaab"
+        //["ab","ba","ba"]
+        String s = "ababaab";
+        String[] words = {"ab","ba","ba"};
+        SubstringConcatenationWords substringConcatenationWords = new SubstringConcatenationWords();
+        List<Integer> substring = substringConcatenationWords.findSubstring(s, words);
+        System.out.println(substring);
     }
 }
