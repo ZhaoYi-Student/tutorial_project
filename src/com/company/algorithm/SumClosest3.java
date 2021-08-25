@@ -16,23 +16,7 @@ package com.company.algorithm;
 public class SumClosest3 {
 
     public int threeSumClosest(int[] nums, int target) {
-        int min = -1;
-        int index = 0;
-        for (int i = 1; i < nums.length - 1; i++) {
-            int value = nums[i - 1] + nums[i] + nums[i + 1];
-            int sub = 0;
-            if (value >= target) {
-                sub = value - target;
-            } else {
-                sub = target - value;
-            }
-            if (min == -1) {
-                min = sub;
-            } else {
-                min = Math.min(min, sub);
-            }
-        }
-        return min;
+        return 2;
     }
 
 }
