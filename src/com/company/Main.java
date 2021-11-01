@@ -1,14 +1,25 @@
 package com.company;
 
-import com.company.algorithm.ArrayNesting;
-import com.company.algorithm.ComplexNumberMultiplication;
-import com.company.algorithm.SumClosest3;
-import com.company.algorithm.SumOfSquareNumbers;
-import com.company.pojo.Person;
+import com.company.expand.entity.ContractEntity;
+import com.company.expand.factory.ContractFactory;
+import com.company.expand.factory.simple.MarketContractSimple;
+
+import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    public static void main(String[] args) {
-        ArrayNesting.arrayNesting(new int[]{0,1,2});
+    private volatile static boolean valve = true;
+
+    public static void main(String[] args) throws InterruptedException {
+        new Thread(() -> {
+            while(valve){
+
+            }
+        }).start();
+        TimeUnit.SECONDS.sleep(1);
+        new Thread(() -> {
+            valve=false;
+            System.out.println("valve is false");
+        }).start();
     }
 }
